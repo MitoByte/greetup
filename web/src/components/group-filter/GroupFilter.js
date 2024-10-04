@@ -21,7 +21,7 @@ export const GroupFilter = ({nameList, selected, toggle, resultList}) => {
 
       //  List of organization names narrowed down by user input
       //  in search bar --->
-    const [ filteredNames, setFilteredNames ] = React.useState( [] );
+    const [ filteredNames, setFilteredNames ] = React.useState( nameList );
 
       //  List of organization names selected by the user --->
     const [ selectedNames, setSelectedNames ] = React.useState( selected.length ? [ ...selected ] : [ 'all' ] );
@@ -29,9 +29,6 @@ export const GroupFilter = ({nameList, selected, toggle, resultList}) => {
 
 
 
-
-      //  Sets default list of organizations to filteredNames state --->
-    React.useEffect( () => setFilteredNames( nameList) , [ nameList ] );
 
       //  Sends list of selected organizations up to parent component
       //  as user makes new selections --->

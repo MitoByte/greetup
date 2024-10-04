@@ -29,13 +29,7 @@ module.exports = {
       options:{
         lang: 'en'
       }
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-material-ui`,
-    `@emotion/react`,
-    `@emotion/styled`
+    }
   ],
 };
 

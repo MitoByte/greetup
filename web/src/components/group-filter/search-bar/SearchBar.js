@@ -23,7 +23,7 @@ export const SearchBar = ( { userInput, searchText } ) => {
       //  Triggers a search when user pushes enter key --->
     const detectEnterKey = (event)=>{
         
-        if(event.key === 'Enter'){ handleSearch(); }
+        if( event.keyCode === 13 ){ handleSearch(); }
 
     }
 
@@ -52,7 +52,7 @@ export const SearchBar = ( { userInput, searchText } ) => {
         <article className={styles.mainContainer}>
 
 
-            <label for="searchBar" className={`srcryBox ${styles.searchLabel}`}>
+            <label htmlFor="searchBar" className={`srcryBox ${styles.searchLabel}`}>
 
                 <input
                     id="searchBar"

@@ -14,6 +14,7 @@ export const OrganizationCard = ( { data, selection } ) => {
 
 
     return(
+        
         <article className={ styles.mainContainer }>
 
 
@@ -37,7 +38,7 @@ export const OrganizationCard = ( { data, selection } ) => {
 
 
                     <p className={ `srcryTxt ${ styles.eventText }` }>
-                        <span className={ styles.eventCount }>{ data.events.length }</span> upcoming event{ data.events.length > 1 ? 's' : '' }!!!
+                        <span className={ styles.eventCount }>{ data.events.length }</span> upcoming event{ data.events.length > 1 ? 's' : '' }
                     </p>
 
                     <button
