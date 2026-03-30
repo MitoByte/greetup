@@ -20,12 +20,12 @@
     "@fullcalendar/interaction": "^6.1.10",
     "@fullcalendar/react": "^6.1.10",
     "@fullcalendar/timegrid": "^6.1.10",
-    "@mui/icons-material": "^5.2.5",
-    "@mui/material": "^5.2.5",
-    "@mui/styles": "^5.2.5",
+    "@mui/icons-material": "^6.4.3",
+    "@mui/material": "~6.4.3",
+    "@mui/styles": "~6.4.3",
     "dayjs": "^1.11.10",
     "framer-motion": "^11.3.28",
-    "gatsby": "^5.12.11",
+    "gatsby": "^5.14.11",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-css": "^2.1.0",
     "gatsby-plugin-html-attributes": "^1.0.5",
@@ -37,7 +37,19 @@
     "gatsby-transformer-sharp": "^5.13.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
     "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "eslint": "9.19.0",
+    "eslint-config-prettier": "10.0.1",
+    "eslint-plugin-prettier": "5.2.3",
+    "prettier": "3.4.2",
+    "tailwindcss":"^4.0.5",
+    "postcss": "^8.5.1",
+    "autoprefixer":"^10.4.20",
+    "gatsby-plugin-postcss": "^6.14.0"
   },
   "repository": {
     "type": "git",
@@ -46,5 +58,8 @@
   "bugs": {
     "url": "https://github.com/mitobyte/greetup/issues"
   },
-  "packageManager": "yarn@1.22.22"
+  "volta": {
+    "node": "20.18.0",
+    "npm": "10.9.0"
+  }
 }

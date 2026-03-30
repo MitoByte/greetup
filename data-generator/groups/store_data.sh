@@ -1,10 +1,10 @@
 #!/bin/bash
 if [ "$DATA_ENV" = 'production' ]; then
     # production mode
-    export DATA_DIR='../data/'
+    export 'DATA_DIR'='/app/data'
   else
     # dev mode
-    export 'DATA_DIR'='/app/data'
+    export DATA_DIR='../data/'
 fi
 
 mkdir -p $DATA_DIR
@@ -16,7 +16,12 @@ while IFS= read -r line; do
   echo "Processing: $type -> $name"
 
   mkdir -p "$DATA_DIR/$name"
-  response=$(curl -s $url)
+
+  if [ "$type" == "linkedin" ]; then
+    response=$(../../getHtml.sh $url)
+  else 
+    response=$(curl -L $url)
+  fi
 
   if [ "$type" == "meetup" ]; then
     script_tags=$(echo $response | hq '{scripts: script[type="application/ld+json"]  | [@text]}')
@@ -64,7 +69,10 @@ while IFS= read -r line; do
   fi
 
   if [ "$type" == "linkedin" ]; then
-    script_tags=$(echo $response | hq '{scripts: script[type="application/ld+json"]  | [@text]}')
+    echo $response
+    script_tags=$(echo $response | hq "{title: .org-top-card-summary__title}")
+    # script_tags=$(echo $response | hq '{scripts: h1["org-top-card-summary__title"]  | [@text]}')
+    echo $script_tags
     scripts=$(echo $script_tags | xq '.scripts')
 
     if [ "$scripts" == "null" ]; then

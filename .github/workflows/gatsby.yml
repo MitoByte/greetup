@@ -58,9 +58,9 @@ jobs:
           export DATA_ENV=production
           bash ./fetch_and_store.sh
           ls -al ../data
-      - name: Install ics
+      - name: Install icalendar
         run: |
-          pip3 install ics
+          pip3 install icalendar
       - name: Combine the data
         working-directory: ./data-generator
         run: |

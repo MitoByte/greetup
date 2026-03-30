@@ -6,3 +6,13 @@ dist
 node_modules
 /data-generator/data/
 .history
+data-generator/data/
+data-generator/.history
+data-generator/dist
+data-generator/node_modules
+data-generator/.idea
+data-generator/.DS_Store
+data-generator/.cache
+data-generator/.vscode
+data-generator/.env
+data-generator/venv
